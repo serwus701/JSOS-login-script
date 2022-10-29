@@ -10,7 +10,7 @@ if __name__ == '__main__':
 
     driver = webdriver.Chrome()
 
-    # driver.manage().timeouts().implicitlyWait(10)
+    driver.set_page_load_timeout(10)
     driver.get("https://jsos.pwr.edu.pl/")
     driver.maximize_window()
 
@@ -33,7 +33,7 @@ if __name__ == '__main__':
 
         time.sleep(0.5)
         driver.find_element(By.XPATH, "/html/body/div[5]/div[2]/div[2]/div[2]/div/div/ul/li[2]/a").click()
-        time.sleep(1)
+        time.sleep(0.5)
         driver.refresh()
 
     driver.execute_script("window.scrollTo(0, 600)")
