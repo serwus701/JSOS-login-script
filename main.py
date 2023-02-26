@@ -5,6 +5,7 @@ import time
 import login_details
 
 if __name__ == '__main__':
+
     username = login_details.username
     password = login_details.password
 
@@ -37,3 +38,4 @@ if __name__ == '__main__':
         driver.refresh()
 
     driver.execute_script("window.scrollTo(0, 600)")
+    time.sleep(10000)
